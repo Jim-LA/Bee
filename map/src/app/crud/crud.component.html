@@ -1,0 +1,44 @@
+<table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Villes</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Ajouter</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (town of towns; track towns) {
+      <form action="" method="">
+        <tr>
+          <th scope="row">
+            {{ town.id }}<input type="text" name="id" id="id" hidden />
+          </th>
+          <td>
+            {{ town.ville }}<input type="text" name="ville" id="ville" hidden />
+          </td>
+          <td>
+            {{ town.lat
+            }}<input type="text" name="latitude" id="latitude" hidden />106511
+          </td>
+          <td>
+            {{ town.lng
+            }}<input type="text" name="longitude" id="longitude" hidden />64465
+          </td>
+          <td>
+            <button class="btn btn-primary" type="submit" value="Ajouter">
+              Ajouter
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" type="submit" value="Supprimer">
+              Supprimer
+            </button>
+          </td>
+        </tr>
+      </form>
+      }
+    </tbody>
+  </table>
